@@ -13,7 +13,7 @@ const ProfileHeader = ({ userId, picturePath }) => {
   const medium = palette.neutral.medium;
 
   const getUser = async () => {
-    const response = await fetch(`${process.env.BACKEND_URL}/users/${userId}`, {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/users/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });

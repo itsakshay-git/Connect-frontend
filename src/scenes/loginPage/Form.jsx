@@ -79,7 +79,8 @@ const Form = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch(`${process.env.BACKEND_URL}/auth/login`, {
+    console.log(process.env.BACKEND_URL)
+    const loggedInResponse = await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
